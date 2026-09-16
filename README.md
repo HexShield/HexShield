@@ -191,7 +191,7 @@ During my internship, I worked as a **Network Specialist / Developer**, splittin
 **Project: Secure tunneling with Cloudflare**
 
 - Set up and configured a **Cloudflare Tunnel** to securely expose a service without opening inbound ports on the network
-- Connected the internal service to the outside through Cloudflare's edge network
+- Connected the internal service to the outside through Cloudflare's edge network, linking it to a custom domain name for reliable remote access
 - Focused on reducing attack surface by avoiding direct public exposure of internal infrastructure
 
 **Stack:** ![Cloudflare](https://img.shields.io/badge/Cloudflare-0d1117?style=for-the-badge&logo=cloudflare&logoColor=F38020) ![Networking](https://img.shields.io/badge/Networking-0d1117?style=for-the-badge)
@@ -333,7 +333,13 @@ REPEAT
 ---
 
 ## 📈 PROGRESS
+---
 
+## 📜 CERTIFICATIONS
+
+- ✅ **Google Cybersecurity Certificate** — Coursera
+
+---
 **Completed / Explored**
 - ✅ Cybersecurity fundamentals
 - ✅ Linux fundamentals
