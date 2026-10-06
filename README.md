@@ -233,6 +233,35 @@ A growing collection of practical work involving:
 
 ---
 
+## 🚩 CTF CHALLENGES
+
+### OverTheWire: Bandit
+**September 2026 – October 6, 2026**
+
+Completed the full **Bandit** wargame on OverTheWire — a progressive Linux/security fundamentals CTF that starts from basic shell navigation and builds up to privilege escalation, cryptography, and scripting.
+
+I deliberately took my time instead of just chasing flags — the goal was to actually understand *why* each technique worked, not just copy-paste a solution.
+
+**What it covered**
+
+- **Linux fundamentals** — file navigation, permissions, file descriptors
+- **File & data formats** — identifying and extracting from gzip, bzip2, and hex-dumped files
+- **SSH & key-based auth** — using `scp` to pull a private key, setting correct permissions (`chmod 600`/`400`), and authenticating with `ssh -i`
+- **Networking tools** — using `nc` to send/receive raw TCP data, and `openssl s_client` to manually complete a TLS handshake and talk to an SSL service
+- **Port scanning** — using `nmap`/`ncat` to find the right service in a port range and interact with it directly
+- **Privilege escalation via SUID** — understanding how the `setuid` bit lets a binary run with its owner's privileges, and why that only works within what the binary itself was built to do
+- **Exploiting a listener handoff** — using a local `nc` listener to receive data forwarded by a setuid binary, effectively getting a privileged process to leak a password to me
+- **Cron jobs** — reading `/etc/cron.d/` entries and cron scripts to find how scheduled tasks moved files/permissions, and exploiting a world-writable cron directory to get a script of mine executed with another user's privileges
+- **Hashing** — computing an `md5sum` of a specific string to predict a dynamically-generated filename
+- **Scripting a brute force** — writing a Python script using raw TCP sockets (`socket.AF_INET`, `SOCK_STREAM`) to automate a 4-digit PIN brute force against a running service
+- **Git archaeology** — using `git log -p`, `git log --all`, `git checkout`, `git tag`, and `git show` to recover information from commit history, branches, and tags that weren't visible in the current working directory
+- **Git workflow** — fixing a blocking `.gitignore` rule, then `git add` → `git commit` → `git push` to get a change through
+
+**Takeaway**
+
+Bandit forced me to actually read documentation and man pages instead of guessing — especially around permissions, SSH key handling, and how cron/setuid privilege boundaries work. It's also where I started treating "why does this work" as more important than "it worked."
+
+---
 ## 🧠 WHAT I'M LEARNING
 
 **SOC / Blue Team**
